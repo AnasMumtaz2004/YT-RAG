@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YT Chat - Chat with any YouTube Video</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              brand: { red: "#FF0033", hover: "#E6002E" },
+              surface: {
+                900: "#0F0F12",
+                850: "#15151A",
+                800: "#1C1C24",
+                700: "#282834",
+                600: "#383849",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface-900 text-zinc-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-red selection:text-white"
+  >
+    <div id="root" class="flex flex-col flex-1"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
